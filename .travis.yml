@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+- 2.0.0
+- 2.1.6
+
+env:
+  matrix:
+  - SECRET_VAR2=SECRET2
+  - SECRET_VAR2=SECRET3
+  - SECRET_VAR2=SECRET4
+
+matrix:
+  allow_failures:
+    - env: SECRET_VAR2=SECRET2
+      rvm: 2.0.0
